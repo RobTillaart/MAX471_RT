@@ -1,12 +1,12 @@
 
-[![Arduino CI](https://github.com/RobTillaart/MAX471/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
-[![Arduino-lint](https://github.com/RobTillaart/MAX471/actions/workflows/arduino-lint.yml/badge.svg)](https://github.com/RobTillaart/MAX471/actions/workflows/arduino-lint.yml)
-[![JSON check](https://github.com/RobTillaart/MAX471/actions/workflows/jsoncheck.yml/badge.svg)](https://github.com/RobTillaart/MAX471/actions/workflows/jsoncheck.yml)
-[![GitHub issues](https://img.shields.io/github/issues/RobTillaart/MAX471.svg)](https://github.com/RobTillaart/MAX471/issues)
+[![Arduino CI](https://github.com/RobTillaart/MAX471_RT/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![Arduino-lint](https://github.com/RobTillaart/MAX471_RT/actions/workflows/arduino-lint.yml/badge.svg)](https://github.com/RobTillaart/MAX471_RT/actions/workflows/arduino-lint.yml)
+[![JSON check](https://github.com/RobTillaart/MAX471_RT/actions/workflows/jsoncheck.yml/badge.svg)](https://github.com/RobTillaart/MAX471_RT/actions/workflows/jsoncheck.yml)
+[![GitHub issues](https://img.shields.io/github/issues/RobTillaart/MAX471_RT.svg)](https://github.com/RobTillaart/MAX471_RT/issues)
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/MAX471/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/RobTillaart/MAX471.svg?maxAge=3600)](https://github.com/RobTillaart/MAX471/releases)
-[![PlatformIO Registry](https://badges.registry.platformio.org/packages/robtillaart/library/MAX471.svg)](https://registry.platformio.org/libraries/robtillaart/MAX471)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/MAX471_RT/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/RobTillaart/MAX471_RT.svg?maxAge=3600)](https://github.com/RobTillaart/MAX471_RT/releases)
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/robtillaart/library/MAX471_RT.svg)](https://registry.platformio.org/libraries/robtillaart/MAX471_RT)
 
 
 # MAX471
