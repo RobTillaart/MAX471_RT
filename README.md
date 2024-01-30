@@ -16,14 +16,16 @@ Arduino library for MAX471 current sensor.
 
 ## Description
 
-The MAX471 is a (older) current sensor
+The MAX471 is an older current sensor which can handle up to 50 Watt, 
+with a maximum of 25 Volts or a current of 3 Amperes.
+It is officially not supported anymore however there are still many
+for sale.
+The MAX471 is also in the market as the GY-471.
 
-a.k.a. GY-471
+The MAX472 seems to be compatible with this library but it uses 
+has some different wiring. Details see datasheet.
 
-MAX472 seems to be compatible but has some different wiring.
-See datasheet.
-
-The library is experimental and needs more testing.
+The library is **experimental** and needs testing.
 
 Feedback, issues and improvements are welcome, 
 Please open an issue on GitHub.
@@ -31,7 +33,10 @@ Please open an issue on GitHub.
 
 #### Limits
 
-**Warning** Use a voltage divider if needed!
+**Warning** Use a voltage divider if you measure voltages above the
+range that is supported by your processor! 
+Always include some safety margin (10%) in such voltage divider so
+the peak is about 90% of the ADC range.
 
 |  unit     |  limits    |  notes    |
 |:---------:|:----------:|:----------|
@@ -42,13 +47,16 @@ Please open an issue on GitHub.
 
 #### Related
 
-- https://wolles-elektronikkiste.de/en/max471-current-sensor (excellent)
+- https://wolles-elektronikkiste.de/en/max471-current-sensor (excellent explanation)
 
 
 ## Connection
 
-- purple board
-- red board
+There are two breakout board variants, a purple board and a red board.
+The main difference is that the purple board has a sign pin. 
+This pin indicate the direction of the current.
+
+The library has two constructors, one with and one without the signPin parameter.
 
 
 ## Interface
@@ -58,6 +66,10 @@ Please open an issue on GitHub.
 ```
 
 #### Constructor
+
+The MAX471 needs two ADC pins. Current version does not support sharing 
+the same pin for both current and voltage. 
+An external multiplexer could handle this.
 
 - **MAX471(uint8_t currentPin, uint8_t voltagePin)** red + purple board
 - **MAX471(uint8_t currentPin, uint8_t voltagePin, uint8_t signPin)** purple board.
@@ -78,6 +90,7 @@ Think of setting the analog reference (AREF) to 1V1.
 #### Read
 
 - **float readCurrent(uint8_t times = 1)** returns Ampere
+- **float readCurrentMA(uint8_t times = 1)** wrapper, returns milliAmpere
 - **float readVoltage(uint8_t times = 1)** returns Volts
 - **float calcPower()** returns Watt, but only after current and voltage 
 has been read as it uses the cached values.
@@ -94,15 +107,17 @@ has been read as it uses the cached values.
 #### Should 
 
 - examples
-  - plotter
   - integrate current over time.
+  - performance
+  - AREF for UNO?
 
 #### Could
 
 - support shutDown pin. LOW/GND = ON, HIGH = OFF. 
   - not on breakout boards.
 - investigate AREF 1V1 to improve resolution.
-
+- multiplex the ADC
+- external ADC (ADS1115) for higher resolution.
 
 #### Ideas
 

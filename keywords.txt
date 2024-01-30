@@ -8,8 +8,11 @@ MAX471	KEYWORD1
 begin	KEYWORD2
 
 readCurrent	KEYWORD2
+readCurrentMilliAmpere	KEYWORD2
 readVoltage	KEYWORD2
+readVoltageMilliVolts	KEYWORD2
 calcPower	KEYWORD2
+calcPowerMilliWatt	KEYWORD2
 
 
 # Constants (LITERAL1)

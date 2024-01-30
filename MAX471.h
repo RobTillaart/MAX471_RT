@@ -25,10 +25,13 @@ public:
   //  ADC parameters, defaults 10 bit 5V (UNO)
   //  assumes both ADC are equal.
   void      begin(float maxVoltage = 5, uint16_t maxSteps = 1023);
-  
-  float     readCurrent(uint8_t times = 1);  //  Ampere
-  float     readVoltage(uint8_t times = 1);  //  Volts
-  float     calcPower();                     //  Watt
+
+  float     readCurrent(uint8_t times = 1);
+  float     readCurrentMilliAmpere(uint8_t times = 1);
+  float     readVoltage(uint8_t times = 1);
+  float     readVoltageMilliVolts(uint8_t times = 1);
+  float     calcPower();
+  float     calcPowerMilliWatt();
 
 
 protected:

@@ -16,7 +16,11 @@
 //
 MAX471::MAX471(uint8_t currentPin, uint8_t voltagePin)
 {
-  MAX471(currentPin, voltagePin, 255);
+  _currentPin = currentPin;
+  _voltagePin = voltagePin;
+  _signPin    = 255;
+  _current    = 0;
+  _voltage    = 0;
 }
 
 
@@ -27,10 +31,7 @@ MAX471::MAX471(uint8_t currentPin, uint8_t voltagePin, uint8_t signPin)
   _signPin    = signPin;
   _current    = 0;
   _voltage    = 0;
-  if (_signPin != 255)
-  {
-    pinMode(_signPin, INPUT_PULLUP);
-  }
+  pinMode(_signPin, INPUT_PULLUP);
 }
 
 
@@ -43,8 +44,9 @@ void MAX471::begin(float maxVoltage, uint16_t maxSteps)
 float MAX471::readCurrent(uint8_t times)
 {
   if (times == 0) times = 1;
+  uint8_t _times = times;
   float sum = 0;
-  while (times--)
+  while (_times--)
   {
     sum += analogRead(_currentPin) ;
   }
@@ -60,11 +62,18 @@ float MAX471::readCurrent(uint8_t times)
 }
 
 
+float MAX471::readCurrentMilliAmpere(uint8_t times)
+{
+  return readCurrent(times) * 1000;
+}
+
+
 float MAX471::readVoltage(uint8_t times)
 {
   if (times == 0) times = 1;
+  uint8_t _times = times;
   float sum = 0;
-  while (times--)
+  while (_times--)
   {
     sum += analogRead(_voltagePin);
   }
@@ -73,9 +82,21 @@ float MAX471::readVoltage(uint8_t times)
 }
 
 
+float MAX471::readVoltageMilliVolts(uint8_t times)
+{
+  return readVoltage(times) * 1000;
+}
+
+
 float MAX471::calcPower()
 {
   return _current * _voltage;
+}
+
+
+float MAX471::calcPowerMilliWatt()
+{
+  return _current * _voltage * 1000;
 }
 
 
