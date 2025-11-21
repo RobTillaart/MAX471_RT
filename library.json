@@ -1,6 +1,6 @@
 {
   "name": "MAX471",
-  "keywords": "MAX471",
+  "keywords": "MAX471, MAX472",
   "description": "Arduino library for MAX471 current sensor.",
   "authors":
   [

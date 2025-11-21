@@ -2,6 +2,7 @@
 
 # Data types (KEYWORD1)
 MAX471	KEYWORD1
+MAX472	KEYWORD1
 
 
 # Methods and Functions (KEYWORD2)

@@ -78,6 +78,11 @@ An external multiplexer could handle this.
 - **MAX471(uint8_t currentPin, uint8_t voltagePin)** red + purple board
 - **MAX471(uint8_t currentPin, uint8_t voltagePin, uint8_t signPin)** purple board.
 
+MAX472 is just a wrapper for now
+
+- **MAX472(uint8_t currentPin, uint8_t voltagePin)** red + purple board
+- **MAX472(uint8_t currentPin, uint8_t voltagePin, uint8_t signPin)** purple board.
+
 
 ### Configure
 

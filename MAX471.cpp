@@ -120,5 +120,20 @@ void MAX471::setFixedVoltage(float volts)
 }
 
 
+//////////////////////////////////////////////////////////////////
+//
+//  DERIVED CLASSES
+//
+MAX472::MAX472(uint8_t currentPin, uint8_t voltagePin)
+       :MAX471(currentPin, voltagePin)
+{
+}
+
+MAX472::MAX472(uint8_t currentPin, uint8_t voltagePin, uint8_t signPin)
+       :MAX471(currentPin, voltagePin, signPin)
+{
+}
+
+
 //  -- END OF FILE --
 

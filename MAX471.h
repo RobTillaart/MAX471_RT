@@ -55,5 +55,17 @@ protected:
 };
 
 
+//////////////////////////////////////////////////////////////////
+//
+//  DERIVED CLASSES
+//
+class MAX472 : public MAX471
+{
+public:
+  MAX472(uint8_t currentPin, uint8_t voltagePin);
+  MAX472(uint8_t currentPin, uint8_t voltagePin, uint8_t signPin);
+};
+
+
 //  -- END OF FILE --
 

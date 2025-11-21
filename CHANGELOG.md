@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - add **setFixedVoltage(float v)**
 - add **float getLastCurrent()**
 - add **float getLastVoltage()**
+- add MAX472 derived class (wraps MAX471)
 - update GitHub actions
 - minor edits
 
