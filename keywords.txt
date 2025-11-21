@@ -14,6 +14,9 @@ readVoltageMilliVolts	KEYWORD2
 calcPower	KEYWORD2
 calcPowerMilliWatt	KEYWORD2
 
+getLastCurrent	KEYWORD2
+getLastVoltage	KEYWORD2
+setFixedVoltage	KEYWORD2
 
 # Constants (LITERAL1)
 MAX471_LIB_VERSION	LITERAL1
